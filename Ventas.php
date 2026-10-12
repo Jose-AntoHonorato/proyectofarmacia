@@ -14,10 +14,12 @@
    $conexion=mysqli_connect($host,$user,$pass,$dbNombre)
              or die ('Error en la conexion ');
    
-   //Guardar los datos en la tabla
-   mysqli_query($conexion,"INSERT INTO ventas(FolTicket, fechventa, prodvend, clavemed, idcliente) 
-                              VALUES ($FolTicket, '$fechventa', $prodvend, $clavemed, $idcliente)");
-   
-	// cerrar la conexion a la base de datos
-	mysqli_close($conexion);
+      // Guardar los datos con consulta preparada
+   $stmt = mysqli_prepare($conexion,
+       "INSERT INTO ventas(FolTicket, fechventa, prodvend, clavemed, idcliente)
+        VALUES (?, ?, ?, ?, ?)");
+   mysqli_stmt_bind_param($stmt, "isiii",
+       $FolTicket, $fechventa, $prodvend, $clavemed, $idcliente);
+   mysqli_stmt_execute($stmt);
+   mysqli_stmt_close($stmt);
 ?>
