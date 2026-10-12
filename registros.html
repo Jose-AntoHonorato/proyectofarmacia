@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Menu</title>
+	  <style>
+      body {
+        background-image: url('Menu.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <br><br><br>
+      <fieldset style="width:666" align="center">
+        <legend>Farmacia san pablo </legend>
+        <br><label> Bienvenido de que registros desa ver la  informacion?</label>
+        <br>
+        <form action="" method="POST">
+          <select name="Registros" onchange="this.form.action = this.value + '.php';">
+            <option value=""></option>
+            <option value="verventas">ventas</option>
+            <option value="verclientes">clientes</option>
+            <option value="verproveedores">provedores</option>
+            <option value="vermedicamentos">medicamentos</option>
+            <option value="verlaboratorio">laboratorio</option>
+          </select>
+          <input type="submit" value="Enviar">
+          <input type="reset" value="Limpiar" >  
+        </form>
+      </fieldset>
+    </center>
+  </body>
+</html>

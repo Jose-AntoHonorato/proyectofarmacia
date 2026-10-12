@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicamentos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('med1.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+		        .col-md-6 {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 mt-5">
+                <h2 class="text-center">REGISTRO MEDICAMENTOS</h2>
+                <form action="Medicamentos1.php" method="POST">
+                    <div class="form-group">
+                        <label for="NombreMed">Nombre del medicamento</label>
+                        <input type="text" name="NombreMed" class="form-control" id="NombreMed" required placeholder="Escriba el nombre del medicamento">
+                    </div>
+                    <div class="form-group">
+                        <label for="Clavemed">Clave del Medicamento</label>
+                        <input type="number" name="Clavemed" class="form-control" id="Clavemed" required placeholder="Escriba el codigo del medicamento">
+                    </div>
+                    <div class="form-group">
+                        <label for="Clavelab">Clave del laboratorio</label>
+                        <input type="number" name="Clavelab" class="form-control" id="Clavelab" required placeholder="Escriba la clave del laboratorio">
+                    </div>
+                    <div class="form-group">
+                        <label for="Fechacad">Fecha de caducidad</label>
+                 <input type="date" name="Fechacad" class="form-control" id="Fechacad" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Lotemed">Lote del medicamento</label>
+                        <input type="number" name="Lotemed" class="form-control" id="Lotemed" required placeholder="Escriba el lote del medicamento">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="reset" class="btn btn-secondary">Limpiar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

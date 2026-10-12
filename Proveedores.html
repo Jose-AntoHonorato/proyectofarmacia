@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proveedores</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('prov.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .col-md-6 {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 mt-5">
+                <h2 class="text-center">DATOS DEL PROVEEDOR</h2>
+                <form action="Proveedores.php" method="post">
+                    <div class="form-group">
+                        <label>Id proveedor</label>
+                        <input type="number" name="Idprov" class="form-control" required maxlength="10" placeholder="Escriba el id del proveedor">
+                    </div>
+                    <div class="form-group">
+                        <label>Nombre del proveedor</label>
+                        <input type="text" name="Nomprov" class="form-control" required maxlength="25" placeholder="Escriba el nombre del proveedor">
+                    </div>
+                    <div class="form-group">
+                        <label>Direccion del proveedor</label>
+                        <input type="text" name="Direcprov" class="form-control" required maxlength="30" placeholder="Escriba la direccion del proveedor">
+                    </div>
+                    <div class="form-group">
+                        <label>Telefono del proveedor</label>
+                        <input type="number" name="Telprov" class="form-control" required maxlength="10" placeholder="Escriba el telefono del proveedor">
+                    </div>
+                    <div class="form-group">
+                        <label>Clave de laboratorio</label>
+                        <input type="number" name="Clavelab" class="form-control" required maxlength="10" placeholder="Escriba la clave del laboratorio">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="reset" class="btn btn-secondary">Limpiar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

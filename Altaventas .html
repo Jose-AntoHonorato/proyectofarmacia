@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('ven.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .col-md-6 {
+            margin-left: 215px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 mt-5">
+                <h2 class="text-center">REGISTRO VENTAS</h2>
+                <form action="Ventas.php" method="POST">
+                    <div class="form-group">
+                        <label>Folio del ticket</label>
+                        <input type="number" name="FolTicket" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Fecha de Venta:</label>
+                        <input type="date" name="fechventa" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Productos vendidos:</label>
+                        <input type="number" name="prodvend" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Clave del medicamento:</label>
+                        <input type="int" name="clavemed" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>IdCliente:</label>
+                        <input type="number" name="idcliente" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="reset" class="btn btn-secondary">Limpiar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

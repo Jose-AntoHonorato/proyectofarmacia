@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('lab1.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+			
+        }
+        .col-md-6 {
+            margin-left: 367px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 mt-5">
+                <h2 class="text-center" style="margin-left: -35px;">REGISTRO DE LABORATORIO</h2>
+                <form action="Laboratorio.php" method="POST">
+                    <div class="form-group">
+                        <label> Clave de laboratorio</label>
+                        <input type="number" name="Clavelab" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nombre del laboratorio</label>
+                        <input type="text" name="Nomlab" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Direccion del laboratorio</label>
+                        <input type="text" name="Direclab" class="form-control" required>
+                    </div>
+					<div class="form-group">
+                        <label>Numero de laboratorio</label>
+                        <input type="number" name="Numlab" class="form-control" required>						
+					</div>
+					<div class="form-group">
+                        <label>Correo del laboratorio</label>
+                        <input type="txt" name="Correo" class="form-control" required>						
+					</div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="reset" class="btn btn-secondary">Limpiar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

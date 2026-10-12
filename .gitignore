@@ -1,0 +1,7 @@
+user.txt
+*.bak
+*.old
+*.log
+.vscode/
+.idea/
+Thumbs.db

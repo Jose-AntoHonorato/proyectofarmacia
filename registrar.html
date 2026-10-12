@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('reg.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .menu {
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 100px;
+            border: 1px solid #000;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px #000;
+        }
+        .menu h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .menu form {
+            display: flex;
+            flex-direction: column;
+        }
+        .menu form select, .menu form input[type="submit"], .menu form input[type="reset"] {
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        .menu form input[type="submit"], .menu form input[type="reset"] {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <h2>Farmacia San Pablo</h2>
+        <form action="" method="POST">
+            <label>Bienvenido al sistema, ¿qué desea dar de alta?</label>
+            <select name="Registros" onchange="this.form.action = this.value + '.html';">
+                <option value=""></option>
+                <option value="ventas">Ventas</option>
+                <option value="Clientes">Clientes</option>
+                <option value="Proveedores">Proveedores</option>
+                <option value="Medicamentos">Medicamentos</option>
+                <option value="Laboratorio">Laboratorio</option>
+            </select>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpiar">
+        </form>
+    </div>
+</body>
+</html>
